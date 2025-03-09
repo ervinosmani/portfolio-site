@@ -21,12 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 "This is a description for Project 3."
             ];
             const liveLinks = [
-                "https://your-live-project1-link.com",
+                "https://ervinosmani.github.io/quote-generator",
                 "https://your-live-project2-link.com",
                 "https://your-live-project3-link.com"
             ];
             const githubLinks = [
-                "https://github.com/yourusername/project1",
+                "https://github.com/ervinosmani/quote-generator",
                 "https://github.com/yourusername/project2",
                 "https://github.com/yourusername/project3"
             ];
