@@ -1,0 +1,421 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+}
+
+/* Vendos "Portfolio" në anën e djathtë */
+nav h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 24px;
+    text-align: left;
+    
+}
+
+/* Vendos hamburgerin në anën e majtë */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    order: 1;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-right: 20px;
+}
+
+nav ul.active {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul.active li {
+    display: block;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Mobile Navbar Styles */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        margin-left: 5px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-right: 5px;
+    }
+
+    /* Lëviz "Hello, I'm Ervin Osmani" më poshtë kur menuja hapet */
+    body.menu-open #hero {
+        margin-top: 120px;
+    }
+}
+
+
+/* Hero Section */
+#hero {
+    background-color: #007bff;
+    color: white;
+    padding: 50px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:white;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Project Cards me dizajn më modern */
+.project-card {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* Efekt Hover për kartat */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Shtojmë dizajn për fotot e projekteve */
+.project-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efekt Hover për fotot e projekteve */
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili për input-et dhe textarea */
+#contact input, #contact textarea {
+    width: calc(100% - 20px); /* ✅ Siguron që input-et të mos dalin jashtë */
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+    box-sizing: border-box; /* ✅ Bën input-et të përshtaten brenda formës */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efekt kur përdoruesi fokusohet në fushë */
+#contact input:focus, #contact textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Stili i butonit */
+#contact button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%; /* ✅ Përshtatja më e mirë në pajisje të ndryshme */
+}
+
+/* Efekt hover për butonin */
+#contact button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+/* Responsive Contact Form */
+@media (max-width: 480px) {
+    #contact {
+        width: 80%;
+    }
+    
+    #contact input, #contact textarea {
+        font-size: 14px;
+    }
+    
+    #contact button {
+        font-size: 16px;
+    }
+}
+
+
+/* Mesazh konfirmimi pas dërgimit */
+#confirmationMessage {
+    display: none;
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+
+/* Modal Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+.close:hover {
+    color: darkred;
+    transform: scale(1.2);
+}
+
+/* Animacioni për hapjen e modal-it */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Animacioni për mbylljen e modal-it */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+}
+
+/* Modal që hapet me animacion */
+.modal.show .modal-content {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Modal që mbyllet me animacion */
+.modal.hide .modal-content {
+    animation: fadeOut 0.3s ease-in forwards;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Efekt hover */
+.social-icons a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome për ikonat sociale -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <button class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        
+        <h1>Portfolio</h1>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" data-aos="fade-up">
+        <h2>Hello, I'm Ervin Osmani</h2>
+        <p>Web Developer | Passionate about Coding</p>
+        <a href="#projects" class="btn">View Projects</a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card" data-aos="zoom-in">
+                <div class="project-image">
+                    <img src="images/project2.jpg" alt="Project 1">
+                </div>
+                <h3>Project 1</h3>
+                <p>Short Description of the project.</p>
+            </div>
+            <div class="project-card" data-aos="zoom-in">
+                <div class="project-image">
+                    <img src="images/project2.jpg" alt="Project 2">
+                </div>
+                <h3>Project 2</h3>
+                <p>Short Description of the project.</p>
+            </div>
+            <div class="project-card" data-aos="zoom-in">
+                <div class="project-image">
+                    <img src="images/project2.jpg" alt="Project 3">
+                </div>
+                <h3>Project 3</h3>
+                <p>Short Description of the project.</p>
+            </div>
+        </div>        
+    </section>
+
+
+     <!-- Modal Popup -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- ✅ Këtu është saktë -->
+            <h2 id="modalTitle">Project Title</h2>
+            <p id="modalDescription">Project description will go here.</p>
+            <a id="modalLink" href="#" target="_blank" class="btn">View Live Project</a>
+            <a id="githubLink" href="#" target="_blank" class="btn">View Code on GitHub</a>
+        </div>
+    </div>
+
+      <!-- Contact Section -->
+        <section id="contact" data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="confirmationMessage">Your message has been sent successfully!</p>
+        </section>
+
+        <!-- Footer me Ikona Sociale -->
+        <footer>
+            <p>Contact me at: ervinosmani3@gmail.com</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/ervin-osmani-5880941bb" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:ervinosmani3@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </footer>
+
+       <!-- AOS JavaScript -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
