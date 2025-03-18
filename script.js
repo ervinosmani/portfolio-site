@@ -21,13 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 "This is a description for Project 3."
             ];
             const liveLinks = [
+                "https://vue-job-finder.netlify.app",
                 "https://ervinosmani.github.io/quote-generator",
-                "https://your-live-project2-link.com",
                 "https://your-live-project3-link.com"
             ];
             const githubLinks = [
+                "https://github.com/ervinosmani/vue-job-finder",
                 "https://github.com/ervinosmani/quote-generator",
-                "https://github.com/yourusername/project2",
                 "https://github.com/yourusername/project3"
             ];
 
